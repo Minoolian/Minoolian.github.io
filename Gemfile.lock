@@ -66,7 +66,7 @@ GEM
       listen (~> 3.0)
     katex (0.8.0)
       execjs (~> 2.7)
-    kramdown (2.3.2)
+    kramdown (2.4.0)
       rexml
     kramdown-math-katex (1.0.1)
       katex (~> 0.4)
