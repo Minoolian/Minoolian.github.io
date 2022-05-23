@@ -12,3 +12,106 @@
     margin: 1rem 0;
   }
 }
+
+// 다크모드 추가코드
+html[data-theme="light"] {
+  --link-color: rgb(0, 112, 201);
+  --main-background-color: #fff;
+  --main-text-color: hsl(0, 0%, 20%);
+  --border-color: #fff;
+  --highlight-color: #727272;
+  --menu-text-color: rgb(71, 71, 71);
+  --highlight-bg: rgba(255, 255, 255, 0.033);
+}
+
+html {
+  --link-color: rgb(100, 210, 255);
+  --main-background-color: hsl(0, 0%, 20%);
+  --main-text-color: hsl(0, 0%, 89%);
+  --border-color: #4c595e;
+  --menu-text-color: rgb(255, 255, 255);
+  --highlight-bg: #383a38;
+  --code-text: #abb2bf;
+  --border-table-color: #3b4042;
+}
+
+.highlighter-rouge { //인라인 코드 박스 둥근
+  border-radius: 0.7em;
+}
+
+code { //인라인 코드 스타일
+  padding: 0.25em 0.5em;
+  background-color: #4d4d4d;
+  font-size: smaller;
+}
+
+pre{ // 코드 글자색, 배경
+  background-color: rgba(255,255,255,.05);
+  border-color: transparent;
+  transition: border-color 0.5s ease;
+  
+}
+body.dark-mode .highlight .c, body.dark-mode .highlight .c1, body .highlight .cm, body.dark-mode .highlight .cp, body.dark-mode .highlight .cs {
+  // 코드내 주석 색
+  color: #717274;
+}
+
+body.dark-mode .highlight .k, body.dark-mode .highlight .kc, body.dark-mode .highlight .kd, body.dark-mode .highlight .kn, body.dark-mode .highlight .kp, body.dark-mode .highlight .kr, body.dark-mode .highlight .kt {
+  // 코드내 CLASS 글자색
+  color: #c07cd4;
+}
+
+body.dark-mode .highlight .bp, body.dark-mode .highlight .nb, body.dark-mode .highlight .nc, body.dark-mode .highlight .nd, body.dark-mode .highlight .ne, body.dark-mode .highlight .ni, body.dark-mode .highlight .nl, body.dark-mode .highlight .no, body.dark-mode .highlight .nv, body.dark-mode .highlight .py, body.dark-mode .highlight .vc, body.dark-mode .highlight .vg {
+  // 코드내 변수명 글자색
+  color: #e0c083;
+}
+
+body.dark-mode .highlight .n, body.dark-mode .highlight .nf, body.dark-mode .highlight .nn, body.dark-mode .highlight .o, body.dark-mode .highlight .p {
+  // 코드내 글자색
+  color: #abb2bf;
+}
+
+body .highlight, body pre.highlight { // 코드 글자색
+  color: #abb2bf;
+}
+
+// html .content {
+//   -webkit-font-smoothing: antialiased;
+// }
+
+hy-push-state a { // redirect ( a 링크 )
+  color: #ccc;
+}
+
+.post-date{ // 날짜 색
+  color: #777;
+}
+
+.read-more{ // 본문피드 더읽기 (continue reading)
+  color: #777;
+}
+
+.note-sm{ // 본문 내 Description
+  border-left: 1px solid var(--border-color);
+  color: hsl(0, 0%, 73%);
+}
+
+.nav-btn-bar{ // 상단 nav-bar
+  background-color: var(--main-background-color);
+}
+
+.sidebar{ // 사이드바 글자색
+  color: rgba(255,255,255,0.75);
+}
+
+blockquote{ // callout 색깔
+  color: hsl(0, 0%, 73%);
+  border-left: 0.25rem solid var(--border-color);
+}
+
+
+body{
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+}
+

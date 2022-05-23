@@ -3,7 +3,7 @@
 
 # Uncomment and set the URL of your site (with protocol, e.g. `https://`)
 # NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
-url: https://minoolian.github.io
+# url:                   https://username.github.io
 
 # Uncomment and set the "base URL" of your site.
 # When your site is in a subdirectory, set to `/<name of directory>`,
@@ -28,15 +28,15 @@ description: >
   with a focus on personal sites that are meant to impress.
 
 # A shorter description for the sidebar.
-tagline: CodeStates
+tagline: Backend
 
 # A list of keywords for your blog
-keywords: []
+keywords: ["Spring", "Java", "Development"]
 
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo: /assets/img/logo.png
+logo: /assets/img/new_logo.jpg
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
@@ -47,13 +47,13 @@ author:
   # twitter:             <username>
 
 # Add links to the sidebar.
-menu:
-  - title: TIL
-    url: /til/
+# menu:
+  # - title: TIL
+  #   url: /til/
   # - title:             Example
   #   url:               /example/
-  # - title:             Documentation
-  #   url:               /docs/
+  # - title:             Test
+  #   url:               /test/
   # - title:             About
   #   url:               /about/
 
@@ -64,30 +64,32 @@ legal:
     url: /LICENSE/
   - title: NOTICE
     url: /NOTICE/
-  - title: CHANGELOG
-    url: /CHANGELOG/
+  # - title: CHANGELOG
+  #   url: /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright: © 2021. All rights reserved.
+copyright: © 2022. All rights reserved.
 
 # Format of the permalinks
-permalink: /:categories/:year-:month-:day-:title/
+# permalink: /:categories/:year-:month-:day-:title/
+# minoolian: 모든 md 파일이 이런식으로 저장되는 것을 막는다.
+permalink: none
 
 # Pagination configuration (used by the `blog` layout)
 paginate: 10
-paginate_path: /:num/
+paginate_path: /page-:num/
 
 # Theme
 # ---------------------------------------------------------------------------------------
 
-#theme: jekyll-theme-hydejack
-remote_theme: hydecorp/hydejack@v9
+# theme: jekyll-theme-hydejack
+# remote_theme: hydecorp/hydejack@v9
 
 # Customizaton
 # ----------------------------------------------------------------------------------------
 
 # Sidebar image and theme color of the site.
-accent_image: /assets/img/sidebar-bg.jpg
+accent_image: /assets/img/new_sidebar.jpg
 accent_color: rgb(79,177,186)
 
 # This is used for the `theme-color` meta tag,
@@ -97,18 +99,22 @@ theme_color: rgb(25,55,71)
 
 # The string encoding which fonts to fetch from Google Fonts.
 # See: <https://hydejack.com/docs/configuration/>
-google_fonts: Roboto+Slab:700|Noto+Sans:400,400i,700,700i
+google_fonts: Roboto+Slab:700|Noto+Sans:400,400i,700,700i|JetBrains+Mono|Noto+Sans+KR
 
 # The text font. Expects a string that is a valid CSS font-family value.
 # To change font-weight, see _sass/variables.scss
-font: Noto Sans, Helvetica, Arial, sans-serif
+# font: Noto Sans KR, Helvetica, Arial, sans-serif
+font: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif
+
+# GmarketSans, Helvetica, Arial, sans-serif
 
 # The font used for headings. Expects a string that is a valid CSS font-family value.
 # To change font-weight, see _sass/variables.scss
-font_heading: Roboto Slab, Helvetica, Arial, sans-serif
+# font_heading: Roboto Slab, Helvetica, Arial, sans-serif
+font_heading: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif
 
 # The font used for code blocks. Expects a string that is a valid CSS font-family value.
-font_code: Fira Code, Menlo, Monaco, Consolas, monospace;
+font_code: JetBrains Mono, Menlo, Monaco, Consolas, monospace;
 
 defaults:
   # You can use this to provide a default accent color and background for
@@ -134,7 +140,7 @@ defaults:
       layout: plain
       sitemap: false
 
-  # # You can use the following to enable comments on all posts.
+  # You can use the following to enable comments on all posts.
   # - scope:
   #     type:            posts
   #   values:
@@ -172,7 +178,7 @@ kramdown:
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
-# disqus:                <username>
+# disqus:                minoolian
 
 # Setting a tinyletter username will enable the newsletter subscription box.
 # PRO version only!
@@ -184,13 +190,13 @@ kramdown:
 
 hydejack:
   # Configure the order of complementary content on blog posts
-  post_addons: [about, newsletter, related, random, comments]
+  post_addons: [comments]
 
   # Configure the order of complementary content on project pages
-  project_addons: [about, newsletter, other, comments]
+  project_addons: [about, other, comments]
 
   # Set to `true` if you don't want to show an icon indicating external links
-  no_mark_external: false
+  no_mark_external: true
 
   # Set to `true` if third party plugins fail to work with dynamically loaded pages
   no_push_state: false
@@ -214,7 +220,7 @@ hydejack:
 
   # Set to `true` if you don't intend on changing the accent color on a per-page basis.
   # This will increase site build speed!
-  no_page_style: false
+  no_page_style: true
 
   # Code blocks and tables "break" the layout by spanning the full available width.
   # Set this to true if you want them to be the same width as other content.
@@ -243,7 +249,7 @@ hydejack:
   no_breadcrumbs: false
 
   # Set to `true` when building with the `--lsi` option
-  use_lsi: true
+  use_lsi: false
 
   # When using Google Analytics, set to `true` to display a cookie notice banner.
   # When enabled, no user-related data will be stored until the user gives consent.
@@ -264,13 +270,13 @@ hydejack:
   # Note that dark mode only works in the PRO version of Hydejack.
   dark_mode:
     # Set to `true` to always use the dark theme.
-    always: false
+    always: true
 
     # Set to `true` to use the dark theme based on visitors' preference (OS setting).
     dynamic: true
 
     # Set to `true` to allow visitors to switch between light and dark mode.
-    icon: true
+    icon: false
 
   # ⚡️ DANGER ZONE ⚡️
   # ----------------
@@ -286,6 +292,7 @@ hydejack:
 # ----------------------------------------------------------------------------------------
 
 collections:
+# minoolian: redirect_url 링크가 여기?
   featured_categories:
     permalink: /:name/
     output: true
@@ -395,14 +402,14 @@ jekyll_compose:
         A short ~160 character description of your post for search engines,
         social media previews, etc.
       image:
-        path: /assets/img/sidebar-bg.jpg
+        path: /assets/img/new_sidebar.jpg
     posts:
       layout: post
       description: >
         A short ~160 character description of your post for search engines,
         social media previews, etc.
       image:
-        path: /assets/img/sidebar-bg.jpg
+        path: /assets/img/new_sidebar.jpg
     projects:
       layout: project
       description: >
@@ -413,3 +420,8 @@ jekyll_compose:
       links:
         - title: Project Link
           url: https://example.com
+
+
+feed:
+  categories:
+    - til
