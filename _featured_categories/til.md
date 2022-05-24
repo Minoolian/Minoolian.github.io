@@ -18,4 +18,6 @@ description: >
 
 # Exclude this example category from the sitemap.
 # DON'T USE THIS SETTING IN YOUR CATEGORIES!
+image:
+  path: /assets/img/new_logo.jpg
 ---

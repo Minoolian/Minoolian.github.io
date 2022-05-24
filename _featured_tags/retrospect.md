@@ -6,5 +6,7 @@ slug: retrospect
 category: codestates
 sidebar: true
 description: >
-   CodeStates **각 Section에 대한 회고**
+   CodeStates **각 Section에 대한 회고**|
+image:
+  path: /assets/img/new_logo.jpg   
 ---
