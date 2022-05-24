@@ -11,8 +11,7 @@ order: 1
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
-  This is a featured category, which have their own page.
-  Check out `_featured_tags/example.md` to learn how to create your own.
+  매일 배운 것에 대해 "**꾸준히**" 작성하는 공간
 
 # (Optional) You can disable grouping posts by date.
 # no_groups: true

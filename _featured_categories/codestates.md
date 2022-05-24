@@ -11,8 +11,7 @@ order: 3
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
-  This is a featured category, which have their own page.
-  Check out `_featured_tags/example.md` to learn how to create your own.
+  **CodeStates 39기** 활동 기록 공간
 
 # (Optional) You can disable grouping posts by date.
 # no_groups: true

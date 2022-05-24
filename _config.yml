@@ -140,6 +140,11 @@ defaults:
     values:
       layout: plain
       sitemap: false
+  
+  - scope:
+      path: google3097ac053f88c33f.html
+    values:
+      sitemap: false
 
   # You can use the following to enable comments on all posts.
   # - scope:
@@ -336,6 +341,7 @@ plugins:
   - jekyll-titles-from-headings
   - jekyll-include-cache
   - jekyll-last-modified-at
+  - jekyll-linkpreview
 
 # SEO Tag
 # ---------------------------------------------------------------------------------------

@@ -6,5 +6,5 @@ slug: retrospect
 category: codestates
 sidebar: true
 description: >
-   Algorithm study / Problem solutions
+   CodeStates **각 Section에 대한 회고**
 ---
