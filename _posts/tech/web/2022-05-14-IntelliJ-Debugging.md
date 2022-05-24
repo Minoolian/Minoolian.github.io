@@ -10,7 +10,7 @@ tags: web
 Step Over, Step Into 정도의 기능만 사용했었지만, 좀 더 자세히 알아보려한다.
 
 * unordered toc
-{:toc}
+{:toc .large-only}
 
 ## Break Point
 ---

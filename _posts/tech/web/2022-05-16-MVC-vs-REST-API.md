@@ -11,7 +11,7 @@ tags: web
 그렇다면 포스팅을 통해 확실히 짚고 넘어가도록 하자.
 
 * unordered toc
-{:toc}
+{:toc .large-only}
 
 ## 디자인 패턴
 ---

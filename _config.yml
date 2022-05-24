@@ -36,8 +36,6 @@ keywords: ["Spring", "Java", "Development"]
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
 logo: /assets/img/new_logo.jpg
-# image:
-#   path: /assets/img/new_logo.jpg
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
