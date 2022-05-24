@@ -24,8 +24,7 @@ title: Minoolian's Dev
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description: >
-  Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
-  with a focus on personal sites that are meant to impress.
+  Minoolian의 Backend 개발 블로그입니다.
 
 # A shorter description for the sidebar.
 tagline: Backend
@@ -37,6 +36,8 @@ keywords: ["Spring", "Java", "Development"]
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
 logo: /assets/img/new_logo.jpg
+# image:
+#   path: /assets/img/new_logo.jpg
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
@@ -432,3 +433,5 @@ jekyll_compose:
 feed:
   categories:
     - til
+    - tech
+    - codestates
