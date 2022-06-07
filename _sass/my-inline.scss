@@ -66,7 +66,7 @@
   color: #4FB1BA;
 }
 
-input[type=checkbox]{
+.sidebar-nav input[type=checkbox]{
   display: none;
 }
 
@@ -83,3 +83,4 @@ input[type=checkbox]:checked ~ ul{
   transform: scaleY(1);
   transition: transform .2s ease-out;
 }
+

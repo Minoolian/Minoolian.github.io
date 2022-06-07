@@ -177,8 +177,9 @@ input[type="radio"],
 input[type="checkbox"] {
   box-sizing: border-box; // 1. Add the correct box sizing in IE 10-
   padding: 0; // 2. Remove the padding in IE 10-
-}
+  margin-right: 5px;
 
+}
 
 input[type="date"],
 input[type="time"],
