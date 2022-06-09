@@ -84,3 +84,27 @@ input[type=checkbox]:checked ~ ul{
   transition: transform .2s ease-out;
 }
 
+// ninoolian
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label:before {
+  content: "\2714";
+  border-radius: 0.2em;
+  margin-right: 0.5em;
+  margin-left: -1.1em;
+  color : transparent;
+}
+
+
+input[type=checkbox]:checked:disabled + label:before {
+  background-color: #bfb;
+  color: #ffffff;
+}
+
+input[type=checkbox]:disabled + label:before {
+  background-color: #ffffff;
+}
+

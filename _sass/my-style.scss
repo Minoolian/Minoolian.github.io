@@ -85,11 +85,12 @@ hy-push-state a { // redirect ( a 링크 )
 }
 
 .post-date{ // 날짜 색
-  color: #777;
+  color: rgb(151, 151, 151);
 }
 
 .read-more{ // 본문피드 더읽기 (continue reading)
-  color: #777;
+  color: rgb(133, 132, 132);
+  font-weight: bold;
 }
 
 .note-sm{ // 본문 내 Description
