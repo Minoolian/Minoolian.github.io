@@ -98,8 +98,9 @@ div.highlight {
     @extend .figure-base;
     @extend .pre-header-common;
     display: block;
-    color: var(--gray)!important;
+    color: rgb(165, 164, 164)!important;
     background-color: var(--gray-bg);
+    font-weight: bold;
 
     > span {
       font-size: smaller;
