@@ -3,6 +3,8 @@ layout: post
 title: "IntelliJ Debugging "
 category: tech
 tags: web
+image:
+  path:   https://user-images.githubusercontent.com/44282342/172939243-84531676-aee7-48de-85f3-304d40af1f7f.png
 ---
 
 이번 포스팅은 **IntelliJ에서의 Debugging**을 알아보려한다.

@@ -3,6 +3,8 @@ layout: post
 title: "Spring MVC vs REST API"
 category: tech
 tags: web
+image:
+  path:   https://user-images.githubusercontent.com/44282342/172937044-b81e5487-9171-4960-9056-2f20c22e9c9c.png
 ---
 이번 포스팅은 **Spring MVC vs REST API**의 차이에 대해 알아보려한다.
 
