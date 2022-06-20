@@ -41,8 +41,4 @@ try {
 
 회원가입 로직은 권한이 필요하지 않는 페이지인데, `BasicAuthenticationFilter`를 타는 것이 의문이다. 또한 **권한이 필요하지 않은 로직의 헤더에 토큰이 담긴다**는 것 자체가 모순인 것 같아 이번주 스프린트 회의에 건의하여 개선해야겠다.
 
-**StackOverflow** [BasicAuthenticationFilter는 권한을 요구하지 않아도 동작합니까?](https://stackoverflow.com/questions/72649403/does-basicauthenticationfilter-work-without-permission){:.heading.flip-title}
-{:.read-more}
-
-
 아직 **예외처리가 빈약**해서 하나하나 신경쓰지 못하고 있다. 다음주 스프린트에서는 각가지 예외처리에 대해 신경써서 추가할 예정이다.
