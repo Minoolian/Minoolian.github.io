@@ -7,6 +7,7 @@
         {% if node.type != "tag" %}
           {% assign subnodes = tag_nodes | where_exp: "item", "item.category == node.slug" %}
           {% assign count = count | plus: 1 %}
+          {% assign size = site.categories[node.slug] | size %}
           <li>
             {% if subnodes != empty %}
             <input type="checkbox" id="folder-checkbox-{{ count }}" />
@@ -14,7 +15,7 @@
             <div class="list-wrapper">
               <a {% if forloop.first %}id="_navigation"{% endif %} 
               href="{{ node.url | relative_url }}" class="sidebar-nav-item" 
-              {% if node.rel %}rel="{{ node.rel }}"{% endif %} >{{ node.title }}
+              {% if node.rel %}rel="{{ node.rel }}"{% endif %} >{{ node.title }} ({{ size }})
             </a>
             {% if subnodes != empty %}
             <button class="spread-btn" onclick="javascript:spread({{ count }})">
@@ -23,9 +24,10 @@
             {% endif %}
             </div>
             {% for subnode in subnodes %}
+              {% assign sub_size = site.tags[subnode.slug] | size %}
               {% if forloop.first %}<ul class="list-body">{% endif %}
                   <li>
-                    <a class="sidebar-nav-subitem" href="{{ subnode.url | relative_url }}">{{ subnode.title }}</a>
+                    <a class="sidebar-nav-subitem" href="{{ subnode.url | relative_url }}">{{ subnode.title }} ({{ sub_size }})</a>
                   </li>
               {% if forloop.last %}</ul>{% endif %}
             {% endfor %}
