@@ -1,11 +1,11 @@
 ---
 layout: tag-list
 type: tag
-title: Web
-slug: web
+title: Git
+slug: git
 category: tech
 sidebar: true
 description: >
-   **Web 기술**에 대한 정보 및 학습 공간
+   **Git 기술**을 모아놓은 공간
 order: 3
 ---
