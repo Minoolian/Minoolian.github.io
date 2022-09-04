@@ -15,7 +15,7 @@
             <div class="list-wrapper">
               <a {% if forloop.first %}id="_navigation"{% endif %} 
               href="{{ node.url | relative_url }}" class="sidebar-nav-item" 
-              {% if node.rel %}rel="{{ node.rel }}"{% endif %} >{{ node.title }} ({{ size }})
+              {% if node.rel %}rel="{{ node.rel }}"{% endif %} >{{ node.title }} {% if node.title != "Tags" %}({{ size }}){% endif %}
             </a>
             {% if subnodes != empty %}
             <button class="spread-btn" onclick="javascript:spread({{ count }})">

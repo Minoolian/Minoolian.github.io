@@ -12,7 +12,7 @@ layout: page
 {% assign tags = site.tags | sort %}
 
 {% for category in featured_categories %}
-  <h2 id="{{ category.slug }}" class="hr">
+  <h2 id="{{ category.slug }}" class="hr-bottom">
     <a href="{{ category.url | relative_url }}">{{ category.title }}</a>
     {% for site_category in categories %}
       {% if site_category[0] == category.slug %}

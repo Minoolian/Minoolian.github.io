@@ -2,8 +2,8 @@
 layout: tags
 title: Tags
 permalink: /tags/
-sidebar: false
+sidebar: true
 order: 4
 description: >
-  List of all categories & tags of blog.
+  Minoolian 블로그의 **모든 Tag**
 ---
