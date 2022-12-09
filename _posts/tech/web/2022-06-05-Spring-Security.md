@@ -7,9 +7,7 @@ image:
   path:   https://user-images.githubusercontent.com/44282342/172929238-6034fca9-91f8-4640-87ce-52307bfc1a1b.png
 ---
 
-이번 포스팅은 **IntelliJ에서의 Debugging**을 알아보려한다.
-
-Step Over, Step Into 정도의 기능만 사용했었지만, 좀 더 자세히 알아보려한다.
+이번 포스팅은 **Spring Security와 JWT**에 대해 알아보려한다.
 
 * unordered toc
 {:toc .large-only}
