@@ -4,7 +4,7 @@ title: "Spring Batch"
 category: tech
 tags: web
 image:
-  path:   https://user-images.githubusercontent.com/44282342/205482196-c8fbae08-98da-44ce-822e-7b7d99b4c315.png
+  path:   https://user-images.githubusercontent.com/44282342/208646053-677c777e-a815-4fd4-9336-d1b56229b43e.png
 ---
 
 * unordered toc
