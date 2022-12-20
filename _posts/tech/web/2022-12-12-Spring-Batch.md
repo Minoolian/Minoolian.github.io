@@ -82,14 +82,201 @@ Reader에서 읽은 Item 데이터를 처리. 필수 요소는 아님.
 ![image](https://user-images.githubusercontent.com/44282342/207274595-4848492d-b177-49fd-b688-80ee9e94aa62.png)
 
 
-## hashCode()
+## 사용 예시
 ***
 
+### 1. 단일 Step
+
+```java
+@Slf4j
+@Configuration
+@EnableBatchProcessing
+public class ExampleMonoJobConfig {
+
+    @Autowired
+    public JobBuilderFactory jobBuilderFactory;
+
+    @Autowired
+    public StepBuilderFactory stepBuilderFactory;
+
+    @Bean
+    public Job exampleMonoJob() {
+
+        Job exampleJob = jobBuilderFactory.get("exampleJob")
+                .start(step())
+                .build();
+
+        return exampleJob;
+    }
+
+    @Bean
+    public Step step() {
+        return stepBuilderFactory.get("step")
+                .tasklet((contribution, chunkContext) -> {
+                    log.info("Step!");
+                    return RepeatStatus.FINISHED;
+                })
+                .build();
+    }
+}
+```
+
+### 2. 다중 Step
+
+```java
+@Slf4j
+@Configuration
+@EnableBatchProcessing
+public class ExampleMultiJobConfig {
+
+    @Autowired
+    public JobBuilderFactory jobBuilderFactory;
+
+    @Autowired
+    public StepBuilderFactory stepBuilderFactory;
+
+    @Bean
+    public Job exampleMultiJob() {
+
+        Job exampleJob = jobBuilderFactory.get("exampleJob")
+                .start(startStep())
+                .next(nextStep())
+                .next(lastStep())
+                .build();
+
+        return exampleJob;
+    }
+
+    public Step lastStep() {
+        return stepBuilderFactory.get("lastStep")
+                .tasklet((contribution, chunkContext) -> {
+                    log.info("last step");
+                    return RepeatStatus.FINISHED;
+                })
+                .build();
+    }
+
+    public Step nextStep() {
+        return stepBuilderFactory.get("nextStep")
+                .tasklet((contribution, chunkContext) -> {
+                    log.info("next step");
+                    return RepeatStatus.FINISHED;
+                })
+                .build();
+    }
+
+    public Step startStep() {
+        return stepBuilderFactory.get("startStep")
+                .tasklet((contribution, chunkContext) -> {
+                    log.info("start step");
+                    return RepeatStatus.FINISHED;
+                })
+                .build();
+    }
+}
+```
+
+### 3. Flow를 통한 Step
+
+```java
+@Slf4j
+@Configuration
+@EnableBatchProcessing
+public class ExampleFlowJobConfig {
+
+    @Autowired
+    public JobBuilderFactory jobBuilderFactory;
+
+    @Autowired
+    public StepBuilderFactory stepBuilderFactory;
+
+    @Bean
+    public Job exampleFlowJob() {
+
+        Job exampleJob = jobBuilderFactory.get("exampleFlowJob")
+                .start(startStep())
+                .on("FAILED")
+                .to(failOverStep())
+                .on("*")
+                .to(writeStep())
+                .on("*")
+                .end()
+
+                .from(startStep())
+                .on("COMPLETED")
+                .to(processStep())
+                .on("*")
+                .to(writeStep())
+                .on("*")
+                .end()
+
+                .from(startStep())
+                .on("*")
+                .to(writeStep())
+                .on("*")
+                .end()
+
+                .end()
+                .build();
+
+        return exampleJob;
+    }
+
+    @Bean
+    public Step startStep() {
+        return stepBuilderFactory.get("startStep")
+                .tasklet((contribution, chunkContext) -> {
+                    log.info("Start Step!");
+
+                    String result = "COMPLETED";
+
+                    //Flow에서 on은 RepeatStatus가 아닌 ExitStatus를 바라본다.
+                    if(result.equals("COMPLETED"))
+                        contribution.setExitStatus(ExitStatus.COMPLETED);
+                    else if(result.equals("FAIL"))
+                        contribution.setExitStatus(ExitStatus.FAILED);
+                    else if(result.equals("UNKNOWN"))
+                        contribution.setExitStatus(ExitStatus.UNKNOWN);
+
+                    return RepeatStatus.FINISHED;
+                })
+                .build();
+    }
+
+    @Bean
+    public Step failOverStep(){
+        return stepBuilderFactory.get("failedOverStep")
+                .tasklet((contribution, chunkContext) -> {
+                    log.info("FailOver Step!");
+                    return RepeatStatus.FINISHED;
+                })
+                .build();
+    }
+
+    @Bean
+    public Step writeStep(){
+        return stepBuilderFactory.get("writeStep")
+                .tasklet((contribution, chunkContext) -> {
+                    log.info("Write Step!");
+                    return RepeatStatus.FINISHED;
+                })
+                .build();
+    }
+
+    public Step processStep(){
+        return stepBuilderFactory.get("processStep")
+                .tasklet((contribution, chunkContext) -> {
+                    log.info("Process Step!");
+                    return RepeatStatus.FINISHED;
+                })
+                .build();
+    }
+}
+```
+
+위의 flow 구성에서 `flow`와 `from`이 `if-else if`와 유사한 동작을 하는 것을 확인하였다.
 
 
 ## 결론
 ***
 
-이 방법을 통해서 PS 풀이를 할 때 두 좌표객체의 동일성을 if문과 함께 검증할 수 있었다. 또한 추후 JPA Entity 객체에서 맞닥뜨렸던 문제를 다시 한번 접하게 된다면 지금 알게된 새로운 방법으로 접근하여 해결할 수 있을 것이다.
-
-여러 자료를 검색하다보니 ***Hash를 이용한 자료구조를 사용하지 않으면*** `hashCode()` 메서드는 재정의하지 않아도 무방하지 않은가? 라는 의문에 대한 글을 많이 접한것 같다. 필자들마다 조금은 의견이 상이하지만 결국 Hash 자료구조를 사용할 일말의 가능성이 있기에 `equals()` 메서드를 재정의한다면 동시에 `hashCode()` 메서드도 **함께 재정의하는 것이 맞다**고 본다.
