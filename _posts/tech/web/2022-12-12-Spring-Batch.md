@@ -4,7 +4,7 @@ title: "Spring Batch"
 category: tech
 tags: web
 image:
-  path:   https://user-images.githubusercontent.com/44282342/208646053-677c777e-a815-4fd4-9336-d1b56229b43e.png
+  path:   https://user-images.githubusercontent.com/44282342/209125661-5aea0122-d622-48cb-968d-3e153b70ab4b.png
 ---
 
 * unordered toc
@@ -82,7 +82,7 @@ Reader에서 읽은 Item 데이터를 처리. 필수 요소는 아님.
 ![image](https://user-images.githubusercontent.com/44282342/207274595-4848492d-b177-49fd-b688-80ee9e94aa62.png)
 
 
-## 사용 예시
+## Step 구성
 ***
 
 ### 1. 단일 Step
@@ -275,6 +275,19 @@ public class ExampleFlowJobConfig {
 ```
 
 위의 flow 구성에서 `flow`와 `from`이 `if-else if`와 유사한 동작을 하는 것을 확인하였다.
+
+### 4. Step 속성
+
+* startlimit() : Step 실패 후 재시작 가능 횟수
+* skiplimit() : Skip 할 수 있는 허용 횟수 및 `skip()`, `noSkip()`으로 예외 지정
+* retrylimit() : Retry 할 수 있는 허용 횟수 및 `retry()`, `noRetry()`으로 예외 지정
+* noRollback() : rollBack이 되지 않을 예외 지정
+
+## Tasklet
+
+![image](https://user-images.githubusercontent.com/44282342/209504228-7a642221-2320-4b59-9917-6cb6ecfb164d.png)
+
+하나의 메서드로 구성된 간단한 인터페이스. 해당 메서드는 실패를 알리기 위한 예외를 반환하거나 throw할 때 까지 execute를 반복적으로 호출한다.
 
 
 ## 결론
