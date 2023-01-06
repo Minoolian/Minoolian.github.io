@@ -2,7 +2,7 @@
 layout: post
 title: "[Spring Security] Test시 403 Error"
 category: tech
-tags: troubleshooting
+tags: troubleshooting spring
 ---
 
 Spring Security가 적용된 Controller 테스트에서 `403 Status Code` 가 발생하는 이유에 대해 포스팅하려 한다.

@@ -2,7 +2,7 @@
 layout: post
 title: "Spring Framework의 특징"
 category: tech
-tags: web
+tags: web spring
 image:
   path:   https://user-images.githubusercontent.com/44282342/173531929-d0803f05-7c1b-4d84-a315-2811764e94b8.png
 ---

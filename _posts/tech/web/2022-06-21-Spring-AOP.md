@@ -2,7 +2,7 @@
 layout: post
 title: "Spring AOP"
 category: tech
-tags: web
+tags: web spring
 image:
   path:   https://user-images.githubusercontent.com/44282342/174726342-1dd83191-8f51-42cc-8c1a-76df9f3c1be2.png
 ---

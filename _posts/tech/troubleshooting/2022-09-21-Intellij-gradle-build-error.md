@@ -2,7 +2,7 @@
 layout: post
 title: "[Gradle Build] Intellij 안의 Gradle Build 오류"
 category: tech
-tags: troubleshooting
+tags: troubleshooting spring
 ---
 
 Intellij 툴 내에 있는 Gradle Build 시 발생하는 오류에 대해 포스팅하려 한다.

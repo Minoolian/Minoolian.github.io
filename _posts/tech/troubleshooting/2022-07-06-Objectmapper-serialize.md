@@ -2,7 +2,7 @@
 layout: post
 title: "[Spring] Objectmapper로 LocalDateTime Serialize시 오류"
 category: tech
-tags: troubleshooting
+tags: troubleshooting spring
 ---
 
 **Objectmapper로 LocalDateTime을 Serialize할 때 발생한 오류**에 대해 포스팅하려 한다.

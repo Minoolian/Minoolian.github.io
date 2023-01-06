@@ -2,7 +2,7 @@
 layout: post
 title: "Spring Batch"
 category: tech
-tags: web
+tags: web spring
 image:
   path:   https://user-images.githubusercontent.com/44282342/209125661-5aea0122-d622-48cb-968d-3e153b70ab4b.png
 ---

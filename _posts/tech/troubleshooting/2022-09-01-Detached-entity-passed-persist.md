@@ -2,7 +2,7 @@
 layout: post
 title: "[JPA] detached entity passed to persist 오류"
 category: tech
-tags: troubleshooting
+tags: troubleshooting spring
 ---
 
 JPA 연관관계 매핑 중 `detached entity passed to persist` **오류**에 대해 포스팅하려 한다.

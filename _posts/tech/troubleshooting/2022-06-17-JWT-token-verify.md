@@ -2,7 +2,7 @@
 layout: post
 title: "[JWT] The token was expected to have 3 parts, but got 1."
 category: tech
-tags: troubleshooting
+tags: troubleshooting spring
 ---
 
 CoCo 프로젝트 중 **JWT 검증과정에 발생한 오류**에 대해 포스팅하려 한다.

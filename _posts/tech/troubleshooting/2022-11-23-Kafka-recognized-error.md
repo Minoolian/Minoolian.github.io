@@ -2,7 +2,7 @@
 layout: post
 title: "[Kafka] zookeeper is not a recognized option"
 category: tech
-tags: troubleshooting
+tags: troubleshooting spring
 ---
 
 Springboot에서 Kafka를 이용한 채팅을 테스트해보던 도중 `Kafka topic 생성시` 발생한 오류에 대해 포스팅하려 한다.

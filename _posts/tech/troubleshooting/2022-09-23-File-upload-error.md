@@ -2,7 +2,7 @@
 layout: post
 title: "[SpringBoot] DTO + MultipartFile 같이 사용시 오류"
 category: tech
-tags: troubleshooting
+tags: troubleshooting spring
 ---
 
 SpringBoot Controller의 핸들러메서드에서 게시글에 `필요한 DTO 데이터`와 이미지 저장을 위한 `MultipartFile`을 함께 사용시 발생한 오류에 대해 포스팅하려 한다.

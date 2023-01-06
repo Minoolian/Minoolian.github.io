@@ -2,7 +2,7 @@
 layout: post
 title: "[JWT] CORS 해결 후 프론트단 토큰 저장 오류"
 category: tech
-tags: troubleshooting
+tags: troubleshooting spring
 ---
 
 CoCo 프로젝트 중 **CORS 해결 후 프론트단의 JWT 저장 문제**에 대해 포스팅하려 한다.

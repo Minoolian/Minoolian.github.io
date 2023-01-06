@@ -2,7 +2,7 @@
 layout: post
 title: "[Mapstruct] Can't map property"
 category: tech
-tags: troubleshooting
+tags: troubleshooting spring
 ---
 
 Mapstruct 라이브러리 사용 중 발생한 `Can't map property ~. Consider to declare/implement a mapping method` 오류에 대해 포스팅하려 한다.

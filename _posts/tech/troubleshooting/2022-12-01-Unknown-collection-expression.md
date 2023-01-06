@@ -2,7 +2,7 @@
 layout: post
 title: "[Springboot] unknown collection expression type"
 category: tech
-tags: troubleshooting
+tags: troubleshooting spring
 ---
 
 Springboot에서 JPA Contains 쿼리 메서드를 사용하던 중 `unknown collection expression type` 오류에 대해 포스팅하려 한다.

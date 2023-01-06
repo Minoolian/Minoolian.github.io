@@ -2,7 +2,7 @@
 layout: post
 title: "[SpringBoot] AntPathMatcher Query String 매칭 문제 (+번외:가변인자)"
 category: tech
-tags: troubleshooting
+tags: troubleshooting spring
 ---
 
 Test 코드 작성 중 MockMvcResultMatchers의 **redirectUrlPattern() 메서드 관련 문제**에 대해 포스팅하려 한다.

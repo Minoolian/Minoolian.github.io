@@ -2,7 +2,7 @@
 layout: post
 title: "[JWT] Authentication 예외처리 중 405 Error 발생"
 category: tech
-tags: troubleshooting
+tags: troubleshooting spring
 ---
 
 CoCo 프로젝트 중 **Authentication (Login 인증) 예외처리 중 발생했던 오류**에 대해 포스팅하려 한다.

@@ -2,7 +2,7 @@
 layout: post
 title: "Spring Security & JWT"
 category: tech
-tags: web
+tags: web spring
 image:
   path:   https://user-images.githubusercontent.com/44282342/172929238-6034fca9-91f8-4640-87ce-52307bfc1a1b.png
 ---
